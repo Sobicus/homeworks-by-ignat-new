@@ -8,9 +8,11 @@ const messageData = {
     message: 'I wake up to the sounds of the silence that allows\n' +
         'For my mind to run around, with my ear up to the ground\n' +
         'I\'m searching to behold the stories that are told\n' +
-        'When my back is to the world that was smiling when I turned',
+        'When my back is to the world that was smiling when I turned\n',
     time: '22:00',
 }
+
+///TEST
 
 function HW1() {
     return (
@@ -18,8 +20,7 @@ function HW1() {
             <hr/>
             homeworks 1
 
-            should work (должно работать)
-
+            should work (должно работат)s
 
             <Message
                 avatar={messageData.avatar}
