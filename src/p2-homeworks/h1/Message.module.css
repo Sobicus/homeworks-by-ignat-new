@@ -1,0 +1,34 @@
+.main {
+    background: gold;
+}
+
+.message {
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.blockmessage {
+    background: tomato;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.text {
+    font-size: 50px;
+}
+
+.xboct {
+    background: tomato;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 30px;
+}
