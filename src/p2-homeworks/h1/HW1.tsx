@@ -20,7 +20,7 @@ function HW1() {
             <hr/>
             homeworks 1
 
-            should work (должно работат)s
+            should work (должно работат)
 
             <Message
                 avatar={messageData.avatar}

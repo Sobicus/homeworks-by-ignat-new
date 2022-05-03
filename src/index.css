@@ -11,3 +11,13 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.general{
+   display: flex;
+    flex-direction: row;
+}
+.generalHomeworks{
+    padding: 0px 5px;
+}
+.homeworksButtons button{
+    margin: 5px;
+}
