@@ -17,7 +17,16 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
     const [error, setError] = useState<string>('') // need to fix any
 
     const setNameCallback = (e: React.ChangeEvent<HTMLInputElement>) => { // need to fix any
-        setName(e.currentTarget.value) // need to fix
+        /*setName(e.currentTarget.value.trim())*/ // need to fix
+        const trimmedName = e.currentTarget.value.trim()
+
+        if (trimmedName) {
+            setName(trimmedName)
+            error && setError('')
+        } else {
+            name && setName('')
+            setError('name is required!')
+        }
     }
     const addUser = () => {
         alert(`Hello ${name}!`) // need to fix
@@ -26,7 +35,11 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
     }
 
     const totalUsers = users.length // need to fix
-
+    const onEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter' && name) { //найем нужен, чтобы проверить есть ли имя иначе будет отправляться пустое
+            addUser()
+        }
+    }
     return (
         <Greeting
             name={name}
@@ -34,6 +47,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
             addUser={addUser}
             error={error}
             totalUsers={totalUsers}
+            onEnter={onEnter}
         />
     )
 }
